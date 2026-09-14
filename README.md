@@ -32,4 +32,5 @@ GitHub Pages: https://svpeditor.github.io/kr1-html-css-shop/
 ## Автор
 
 ФИО: Климашевский Даниил Александрович
+
 Группа: ЭФБО-07-25
