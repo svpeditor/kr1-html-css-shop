@@ -25,6 +25,17 @@
 
 GitHub Pages: https://svpeditor.github.io/kr1-html-css-shop/
 
+## Скриншоты
+
+Лежат в папке screenshots:
+
+- 1-vscode-structure.png - структура проекта в VS Code
+- 2-git-log-graph.png - вывод git log --oneline --graph
+- 3-pull-request.png - Pull Request
+- 4-files-changed.png - вкладка Files changed
+- 5-github-pages.png - опубликованный сайт
+- 6-readme-link.png - README со ссылкой на сайт
+
 ## Текущий статус
 
 Создана базовая структура проекта.
