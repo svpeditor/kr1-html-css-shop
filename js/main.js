@@ -10,6 +10,9 @@ const closeDialogButton = document.getElementById('close-order-dialog');
 // Получаем скрытое поле, в которое будет записан выбранный товар.
 const selectedProductInput = document.getElementById('selected-product');
 
+// Получаем место в окне, где показывается название товара.
+const dialogProductName = document.getElementById('order-dialog-product');
+
 // Перебираем все кнопки "Заказать".
 orderButtons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -18,6 +21,9 @@ orderButtons.forEach((button) => {
 
         // Записываем название товара в скрытое поле формы.
         selectedProductInput.value = productName;
+
+        // Показываем название товара в модальном окне.
+        dialogProductName.textContent = productName;
 
         // Открываем модальное окно.
         orderDialog.showModal();
