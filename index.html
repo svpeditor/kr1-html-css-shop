@@ -3,102 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Учебный интернет-магазин</title>
+    <meta name="description" content="Клац - учебный интернет-магазин механических клавиатур, свитчей и кейкапов.">
+    <title>Клац | Магазин механических клавиатур</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="site-header">
-            <a class="site-logo" href="index.html">ShopProject</a>
+    <header class="site-header" id="top">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">Клац</a>
 
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="#popular">Популярные товары</a></li>
-                    <li><a href="#advantages">Преимущества</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
+
+            <a class="button site-header__button" href="order.html">Оформить заявку</a>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Учебный интернет-магазин</h1>
-            <p>
-                Это стартовая страница учебного frontend-проекта.
-                В дальнейшем на её основе будет разработан многостраничный сайт
-                интернет-магазина или каталога услуг.
-            </p>
-            <a class="button" href="#popular">Перейти к товарам</a>
+            <div class="hero__content">
+                <p class="hero__label">Магазин механических клавиатур</p>
+                <h1 class="hero__title">Клавиатуры, на которых приятно печатать</h1>
+                <p class="hero__text">
+                    Собираем и продаём механические клавиатуры, свитчи и кейкапы.
+                    Каждую клавиатуру проверяем перед отправкой и помогаем подобрать
+                    свитчи под учёбу, работу или игры.
+                </p>
+                <div class="hero__actions">
+                    <a class="button" href="catalog.html">Перейти в каталог</a>
+                    <a class="button button--secondary" href="#popular">Популярные товары</a>
+                </div>
+            </div>
+            <img class="hero__image" src="images/hero-keyboard.jpg" width="800" height="600" alt="Механическая клавиатура в деревянном корпусе с зелёными и белыми кейкапами">
         </section>
 
         <section class="section" id="advantages">
-            <h2>Преимущества проекта</h2>
-            <ul class="advantages-list">
-                <li>понятная HTML-структура;</li>
-                <li>семантические блоки страницы;</li>
-                <li>подключение внешнего CSS-файла;</li>
-                <li>подготовка к разработке многостраничного сайта.</li>
+            <div class="section__header">
+                <h2 class="section__title">Почему покупают у нас</h2>
+            </div>
+
+            <ul class="advantages">
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Горячая замена</h3>
+                    <p class="advantages__text">Во всех клавиатурах Клац свитчи меняются без паяльника, за пару минут.</p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Проверка перед отправкой</h3>
+                    <p class="advantages__text">Прожимаем каждую клавишу и проверяем кабель, прежде чем упаковать заказ.</p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Доставка по России</h3>
+                    <p class="advantages__text">Курьером по Москве за 1-2 дня, в другие города через пункты выдачи.</p>
+                </li>
+                <li class="advantages__item">
+                    <h3 class="advantages__title">Гарантия 12 месяцев</h3>
+                    <p class="advantages__text">Если клавиша перестала срабатывать, заменим свитч или всю клавиатуру.</p>
+                </li>
             </ul>
         </section>
 
         <section class="section" id="popular">
-            <h2>Популярные товары</h2>
+            <div class="section__header">
+                <h2 class="section__title">Популярные товары</h2>
+                <a class="section__link" href="catalog.html">Весь каталог</a>
+            </div>
 
-            <article class="product-card">
-                <h3>Товар 1</h3>
-                <p>Краткое описание учебного товара.</p>
-                <p>Цена: 1000 руб.</p>
-                <button class="button product-card__button" type="button" data-product="Товар 1">
-                    Заказать
-                </button>
-            </article>
+            <p class="success-message" id="success-message" hidden>
+                Заявка отправлена! Мы перезвоним в течение 15 минут в рабочее время.
+            </p>
 
-            <article class="product-card">
-                <h3>Товар 2</h3>
-                <p>Краткое описание учебного товара.</p>
-                <p>Цена: 1500 руб.</p>
-                <button class="button product-card__button" type="button" data-product="Товар 2">
-                    Заказать
-                </button>
-            </article>
+            <div class="product-grid">
+                <article class="product-card">
+                    <span class="badge badge--hit product-card__badge">Хит</span>
+                    <img class="product-card__image" src="images/klac-60.jpg" width="800" height="600" alt="Клавиатура Клац 60 с серыми и синими кейкапами">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Клавиатура 60%</p>
+                        <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац 60</a></h3>
+                        <p class="product-card__description">Компактная клавиатура на 61 клавишу со свитчами Gateron Yellow.</p>
+                        <p class="product-card__price">5 490 ₽</p>
+                        <div class="product-card__actions">
+                            <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                            <button class="button button--small product-card__button" type="button" data-product="Клац 60">Заказать</button>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="product-card">
-                <h3>Товар 3</h3>
-                <p>Краткое описание учебного товара.</p>
-                <p>Цена: 2000 руб.</p>
-                <button class="button product-card__button" type="button" data-product="Товар 3">
-                    Заказать
-                </button>
-            </article>
+                <article class="product-card">
+                    <span class="badge badge--new product-card__badge">Новинка</span>
+                    <img class="product-card__image" src="images/klac-65-wood.jpg" width="800" height="600" alt="Клавиатура Клац 65 Wood в деревянном корпусе">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Клавиатура 65%</p>
+                        <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац 65 Wood</a></h3>
+                        <p class="product-card__description">Корпус из ореха, отдельные стрелки и кейкапы Кемпинг в комплекте.</p>
+                        <p class="product-card__price">12 990 ₽</p>
+                        <div class="product-card__actions">
+                            <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                            <button class="button button--small product-card__button" type="button" data-product="Клац 65 Wood">Заказать</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card product-card--discount">
+                    <span class="badge badge--sale product-card__badge">Скидка</span>
+                    <img class="product-card__image" src="images/klac-tkl-graphite.jpg" width="800" height="600" alt="Тёмная клавиатура Клац TKL Graphite без цифрового блока">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Клавиатура TKL</p>
+                        <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац TKL Graphite</a></h3>
+                        <p class="product-card__description">Без цифрового блока, тёмный корпус и тактильные свитчи Kailh Box Brown.</p>
+                        <p class="product-card__price">7 990 ₽ <s class="product-card__old-price">9 490 ₽</s></p>
+                        <div class="product-card__actions">
+                            <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                            <button class="button button--small product-card__button" type="button" data-product="Клац TKL Graphite">Заказать</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <span class="badge badge--new product-card__badge">Новинка</span>
+                    <img class="product-card__image" src="images/switch-tester.jpg" width="800" height="600" alt="Тестер с шестью свитчами разных цветов на прозрачной подставке">
+                    <div class="product-card__body">
+                        <p class="product-card__category">Свитчи</p>
+                        <h3 class="product-card__title"><a class="product-card__link" href="product.html">Тестер свитчей, 6 видов</a></h3>
+                        <p class="product-card__description">Шесть популярных свитчей на подставке, чтобы выбрать свой ход клавиш.</p>
+                        <p class="product-card__price">790 ₽</p>
+                        <div class="product-card__actions">
+                            <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                            <button class="button button--small product-card__button" type="button" data-product="Тестер свитчей">Заказать</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <aside class="aside-info">
-            <h2>Информация для студентов</h2>
-            <p>
-                На следующих практических занятиях этот проект будет расширяться:
-                появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
-                БЭМ-структура и адаптивная версия сайта.
-            </p>
+        <section class="section" id="reviews">
+            <div class="section__header">
+                <h2 class="section__title">Отзывы покупателей</h2>
+            </div>
+
+            <ul class="reviews">
+                <li class="reviews__item">
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Взял Клац 60 для учёбы и игр. Печатать приятно, а свитчи на тактильные поменял минут за десять.
+                        </blockquote>
+                        <figcaption class="review__author">
+                            Артём
+                            <span class="review__product">купил Клац 60</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="reviews__item">
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Долго выбирала между 65% и TKL, по телефону всё объяснили. Клавиатура пришла через два дня, упакована хорошо.
+                        </blockquote>
+                        <figcaption class="review__author">
+                            Марина
+                            <span class="review__product">купила Клац TKL Graphite</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="reviews__item">
+                    <figure class="review">
+                        <blockquote class="review__text">
+                            Тестер очень помог, понял, что мне нравятся линейные свитчи. Теперь собираю свою первую клавиатуру.
+                        </blockquote>
+                        <figcaption class="review__author">
+                            Илья
+                            <span class="review__product">купил тестер свитчей</span>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+
+        <aside class="promo">
+            <div class="promo__content">
+                <h2 class="promo__title">Не знаете, какую клавиатуру выбрать?</h2>
+                <p class="promo__text">Оставьте заявку на консультацию, поможем подобрать формат и свитчи.</p>
+            </div>
+            <a class="button promo__button" href="order.html?product=consultation">Получить консультацию</a>
         </aside>
     </main>
 
-    <footer id="contacts">
-        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
-        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    <footer class="site-footer" id="contacts">
+        <div class="site-footer__inner">
+            <div class="site-footer__column">
+                <a class="site-footer__logo" href="index.html">Клац</a>
+                <p class="site-footer__text">Механические клавиатуры, свитчи и кейкапы. Учебный проект по дисциплине "Фронтенд и бэкенд разработка".</p>
+            </div>
+
+            <nav class="site-footer__column" aria-label="Разделы сайта">
+                <h2 class="site-footer__title">Разделы</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+                    <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+                    <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+                    <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__column" aria-label="Покупателям">
+                <h2 class="site-footer__title">Покупателям</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li>
+                    <li><a class="site-footer__link" href="contacts.html#faq">Частые вопросы</a></li>
+                    <li><a class="site-footer__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-footer__column">
+                <h2 class="site-footer__title">Контакты</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                    <li><a class="site-footer__link" href="mailto:info@klac.example">info@klac.example</a></li>
+                    <li>Москва, ул. Примерная, 10</li>
+                    <li>Ежедневно с 10:00 до 20:00</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="site-footer__copy">&copy; 2026 Клац. Климашевский Даниил, ЭФБО-07-25.</p>
     </footer>
 
     <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-        <h2 id="order-dialog-title">Оформление заявки</h2>
+        <h2 class="order-dialog__title" id="order-dialog-title">Быстрый заказ</h2>
+        <p class="order-dialog__text">
+            Товар: <span class="order-dialog__product" id="order-dialog-product"></span>.
+            Оставьте контакты, и мы перезвоним, чтобы уточнить детали.
+        </p>
 
         <form class="order-form" id="order-form" action="#" method="post" novalidate>
             <input id="selected-product" name="selected-product" type="hidden">
 
-            <div class="form-field">
-                <label for="order-name">Имя</label>
+            <div class="order-form__field">
+                <label class="order-form__label" for="order-name">Имя</label>
                 <input
+                    class="order-form__input"
                     id="order-name"
                     name="name"
                     type="text"
@@ -109,9 +260,10 @@
                 >
             </div>
 
-            <div class="form-field">
-                <label for="order-email">E-mail</label>
+            <div class="order-form__field">
+                <label class="order-form__label" for="order-email">E-mail</label>
                 <input
+                    class="order-form__input"
                     id="order-email"
                     name="email"
                     type="email"
@@ -121,32 +273,35 @@
                 >
             </div>
 
-            <div class="form-field">
-                <label for="order-phone">Телефон</label>
+            <div class="order-form__field">
+                <label class="order-form__label" for="order-phone">Телефон</label>
                 <input
+                    class="order-form__input"
                     id="order-phone"
                     name="phone"
                     type="tel"
                     inputmode="tel"
                     placeholder="+7 (900) 000-00-00"
                     pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                    autocomplete="tel"
                     required
                 >
-                <small>Формат: +7 (900) 000-00-00</small>
+                <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
             </div>
 
-            <div class="form-field">
-                <label for="order-date">Дата связи</label>
+            <div class="order-form__field">
+                <label class="order-form__label" for="order-date">Удобная дата звонка</label>
                 <input
+                    class="order-form__input"
                     id="order-date"
                     name="date"
                     type="date"
                 >
             </div>
 
-            <div class="form-field">
-                <label for="order-topic">Тема заявки</label>
-                <select id="order-topic" name="topic" required>
+            <div class="order-form__field">
+                <label class="order-form__label" for="order-topic">Тема заявки</label>
+                <select class="order-form__input" id="order-topic" name="topic" required>
                     <option value="">Выберите тему</option>
                     <option value="product">Заказ товара</option>
                     <option value="consultation">Консультация</option>
@@ -154,37 +309,36 @@
                 </select>
             </div>
 
-            <div class="form-field">
-                <label for="order-comment">Комментарий</label>
+            <div class="order-form__field">
+                <label class="order-form__label" for="order-comment">Комментарий</label>
                 <textarea
+                    class="order-form__input"
                     id="order-comment"
                     name="comment"
-                    rows="4"
-                    placeholder="Укажите дополнительную информацию"
+                    rows="3"
+                    placeholder="Например, какие свитчи вам нравятся"
                 ></textarea>
             </div>
 
-            <div class="form-field form-field--checkbox">
-                <label>
+            <div class="order-form__field">
+                <label class="order-form__checkbox">
                     <input
                         id="order-agreement"
                         name="agreement"
                         type="checkbox"
                         required
                     >
-                    Я согласен на обработку данных
+                    Я согласен на обработку персональных данных
                 </label>
             </div>
 
-            <div class="form-actions">
-                <button type="button" id="close-order-dialog">Закрыть</button>
-                <button type="submit">Отправить заявку</button>
+            <div class="order-form__actions">
+                <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+                <button class="button" type="submit">Отправить заявку</button>
             </div>
         </form>
     </dialog>
 
-    <p class="success-message" id="success-message" hidden>
-        Форма успешно отправлена!
-    </p>
+    <a class="to-top" href="#top">Наверх</a>
 </body>
 </html>

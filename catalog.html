@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог магазина Клац: механические клавиатуры, свитчи, кейкапы и аксессуары.">
+    <title>Каталог | Клац</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">Клац</a>
+
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a class="button site-header__button" href="order.html">Оформить заявку</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+                    <li class="breadcrumbs__item" aria-current="page">Каталог</li>
+                </ol>
+            </nav>
+            <h1 class="page-header__title">Каталог</h1>
+            <p class="page-header__text">Клавиатуры, свитчи, кейкапы и аксессуары. Всего 10 товаров.</p>
+        </div>
+
+        <nav class="categories" aria-label="Категории каталога">
+            <ul class="categories__list">
+                <li><a class="categories__link" href="#keyboards">Клавиатуры <span class="categories__count">4</span></a></li>
+                <li><a class="categories__link" href="#switches">Свитчи <span class="categories__count">2</span></a></li>
+                <li><a class="categories__link" href="#keycaps">Кейкапы <span class="categories__count">2</span></a></li>
+                <li><a class="categories__link" href="#accessories">Аксессуары <span class="categories__count">2</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="catalog">
+            <aside class="catalog__filters filters" aria-label="Фильтры">
+                <form class="filters__form" action="#">
+                    <h2 class="filters__title">Фильтры</h2>
+
+                    <fieldset class="filters__group">
+                        <legend class="filters__legend">Категория</legend>
+                        <label class="filters__option"><input type="checkbox" name="category" value="keyboards" checked> Клавиатуры</label>
+                        <label class="filters__option"><input type="checkbox" name="category" value="switches" checked> Свитчи</label>
+                        <label class="filters__option"><input type="checkbox" name="category" value="keycaps" checked> Кейкапы</label>
+                        <label class="filters__option"><input type="checkbox" name="category" value="accessories" checked> Аксессуары</label>
+                    </fieldset>
+
+                    <fieldset class="filters__group">
+                        <legend class="filters__legend">Формат клавиатуры</legend>
+                        <label class="filters__option"><input type="checkbox" name="layout" value="60"> 60%</label>
+                        <label class="filters__option"><input type="checkbox" name="layout" value="65"> 65%</label>
+                        <label class="filters__option"><input type="checkbox" name="layout" value="tkl"> TKL</label>
+                    </fieldset>
+
+                    <fieldset class="filters__group">
+                        <legend class="filters__legend">Цена, ₽</legend>
+                        <div class="filters__price">
+                            <label class="filters__price-label" for="price-from">от</label>
+                            <input class="filters__input" id="price-from" name="price-from" type="number" min="0" step="100" placeholder="0">
+                            <label class="filters__price-label" for="price-to">до</label>
+                            <input class="filters__input" id="price-to" name="price-to" type="number" min="0" step="100" placeholder="15000">
+                        </div>
+                    </fieldset>
+
+                    <label class="filters__option"><input type="checkbox" name="in-stock" value="yes"> Только в наличии</label>
+
+                    <div class="filters__actions">
+                        <button class="button button--small" type="button">Показать</button>
+                        <button class="button button--secondary button--small" type="reset">Сбросить</button>
+                    </div>
+                </form>
+            </aside>
+
+            <div class="catalog__content">
+                <section class="catalog__section" id="keyboards">
+                    <h2 class="catalog__title">Клавиатуры</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <span class="badge badge--hit product-card__badge">Хит</span>
+                            <img class="product-card__image" src="images/klac-60.jpg" width="800" height="600" alt="Клавиатура Клац 60 с серыми и синими кейкапами">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Клавиатура 60%</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац 60</a></h3>
+                                <p class="product-card__description">Компактная клавиатура на 61 клавишу со свитчами Gateron Yellow.</p>
+                                <p class="product-card__price">5 490 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=klac-60">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <span class="badge badge--new product-card__badge">Новинка</span>
+                            <img class="product-card__image" src="images/klac-65-wood.jpg" width="800" height="600" alt="Клавиатура Клац 65 Wood в деревянном корпусе" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Клавиатура 65%</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац 65 Wood</a></h3>
+                                <p class="product-card__description">Корпус из ореха, отдельные стрелки и кейкапы Кемпинг в комплекте.</p>
+                                <p class="product-card__price">12 990 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=klac-65-wood">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card product-card--discount">
+                            <span class="badge badge--sale product-card__badge">Скидка</span>
+                            <img class="product-card__image" src="images/klac-tkl-graphite.jpg" width="800" height="600" alt="Тёмная клавиатура Клац TKL Graphite без цифрового блока" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Клавиатура TKL</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац TKL Graphite</a></h3>
+                                <p class="product-card__description">Без цифрового блока, тёмный корпус и тактильные свитчи Kailh Box Brown.</p>
+                                <p class="product-card__price">7 990 ₽ <s class="product-card__old-price">9 490 ₽</s></p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=klac-tkl-graphite">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img class="product-card__image" src="images/klac-tkl-retro.jpg" width="800" height="600" alt="Клавиатура Клац TKL Retro с оранжевыми и кремовыми кейкапами" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Клавиатура TKL</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Клац TKL Retro</a></h3>
+                                <p class="product-card__description">Оранжевые и кремовые кейкапы в стиле старых компьютеров, линейные свитчи.</p>
+                                <p class="product-card__price">8 490 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=klac-tkl-retro">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="catalog__section" id="switches">
+                    <h2 class="catalog__title">Свитчи</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img class="product-card__image" src="images/switches-mx-green.jpg" width="800" height="600" alt="Два свитча Cherry MX Green, вид сверху и сбоку" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Свитчи</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Свитчи Cherry MX Green, 10 шт.</a></h3>
+                                <p class="product-card__description">Тактильные свитчи со щелчком и усилием нажатия 80 г.</p>
+                                <p class="product-card__price">1 190 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=switches-mx-green">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <span class="badge badge--new product-card__badge">Новинка</span>
+                            <img class="product-card__image" src="images/switch-tester.jpg" width="800" height="600" alt="Тестер с шестью свитчами разных цветов на прозрачной подставке" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Свитчи</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Тестер свитчей, 6 видов</a></h3>
+                                <p class="product-card__description">Шесть популярных свитчей на подставке, чтобы выбрать свой ход клавиш.</p>
+                                <p class="product-card__price">790 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=switch-tester">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="catalog__section" id="keycaps">
+                    <h2 class="catalog__title">Кейкапы</h2>
+                    <div class="product-grid">
+                        <article class="product-card product-card--discount">
+                            <span class="badge badge--sale product-card__badge">Скидка</span>
+                            <img class="product-card__image" src="images/keycaps-orange.jpg" width="800" height="600" alt="Оранжевые кейкапы на литниках" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Кейкапы</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Кейкапы Orange, 110 шт.</a></h3>
+                                <p class="product-card__description">Яркий набор из PBT-пластика для полноразмерных и TKL-клавиатур.</p>
+                                <p class="product-card__price">2 990 ₽ <s class="product-card__old-price">3 490 ₽</s></p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=keycaps-orange">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img class="product-card__image" src="images/keycaps-camp.jpg" width="800" height="600" alt="Зелёные и бордовые кейкапы Кемпинг с рисунками гор" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Кейкапы</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Кейкапы Кемпинг, 140 шт.</a></h3>
+                                <p class="product-card__description">Зелёные, бордовые и кремовые кейкапы с рисунками гор и палаток.</p>
+                                <p class="product-card__price">4 490 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=keycaps-camp">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="catalog__section" id="accessories">
+                    <h2 class="catalog__title">Аксессуары</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img class="product-card__image" src="images/keycap-puller.jpg" width="800" height="600" alt="Проволочный съёмник кейкапов с чёрной ручкой" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Аксессуары</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Съёмник кейкапов</a></h3>
+                                <p class="product-card__description">Проволочный съёмник, чтобы снять кейкапы и не поцарапать корпус.</p>
+                                <p class="product-card__price">390 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <a class="button button--small" href="order.html?product=keycap-puller">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card product-card--unavailable">
+                            <img class="product-card__image" src="images/cable-coiled.jpg" width="800" height="600" alt="Витые кабели для клавиатуры разных цветов" loading="lazy">
+                            <div class="product-card__body">
+                                <p class="product-card__category">Аксессуары</p>
+                                <h3 class="product-card__title"><a class="product-card__link" href="product.html">Витой кабель USB-C</a></h3>
+                                <p class="product-card__description">Кабель 1,5 м с пружиной и разъёмом-авиатором. Ждём новую поставку.</p>
+                                <p class="product-card__price">1 490 ₽</p>
+                                <div class="product-card__actions">
+                                    <a class="button button--secondary button--small" href="product.html">Подробнее</a>
+                                    <button class="button button--small" type="button" disabled>Нет в наличии</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="site-footer__inner">
+            <div class="site-footer__column">
+                <a class="site-footer__logo" href="index.html">Клац</a>
+                <p class="site-footer__text">Механические клавиатуры, свитчи и кейкапы. Учебный проект по дисциплине "Фронтенд и бэкенд разработка".</p>
+            </div>
+
+            <nav class="site-footer__column" aria-label="Разделы сайта">
+                <h2 class="site-footer__title">Разделы</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+                    <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+                    <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+                    <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__column" aria-label="Покупателям">
+                <h2 class="site-footer__title">Покупателям</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li>
+                    <li><a class="site-footer__link" href="contacts.html#faq">Частые вопросы</a></li>
+                    <li><a class="site-footer__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-footer__column">
+                <h2 class="site-footer__title">Контакты</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                    <li><a class="site-footer__link" href="mailto:info@klac.example">info@klac.example</a></li>
+                    <li>Москва, ул. Примерная, 10</li>
+                    <li>Ежедневно с 10:00 до 20:00</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="site-footer__copy">&copy; 2026 Клац. Климашевский Даниил, ЭФБО-07-25.</p>
+    </footer>
+
+    <a class="to-top" href="#top">Наверх</a>
+</body>
+</html>
