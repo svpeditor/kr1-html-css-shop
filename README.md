@@ -16,7 +16,7 @@ GitHub Pages: https://svpeditor.github.io/kr1-html-css-shop/
 
 ## Страницы
 
-- index.html - главная: hero-блок, преимущества, популярные товары, отзывы, модальное окно быстрого заказа
+- index.html - главная: приветственный блок, преимущества, популярные товары, отзывы, модальное окно быстрого заказа
 - catalog.html - каталог: категории с якорными ссылками, статический блок фильтров, 10 карточек товаров
 - product.html - карточка товара Клац 60: фото, описание, цена, таблицы характеристик и комплектаций, похожие товары
 - order.html - оформление заявки: форма с проверкой полей
@@ -57,7 +57,7 @@ GitHub Pages: https://svpeditor.github.io/kr1-html-css-shop/
 
 ## Самостоятельные доработки
 
-- своё оформление магазина: тёмная шапка и подвал, оранжевый акцентный цвет, шрифт Rubik, фотографии товаров
+- простое оформление в синих и белых цветах, фотографии товаров
 - дополнительная страница доставки и оплаты с таблицей
 - на главной добавлены отзывы покупателей и блок консультации
 - бейджи "Хит", "Новинка", "Скидка", старая цена у товаров со скидкой, товар "нет в наличии" с отключённой кнопкой
@@ -72,7 +72,7 @@ GitHub Pages: https://svpeditor.github.io/kr1-html-css-shop/
 
 Фотографии взяты с Wikimedia Commons, у всех свободная лицензия. Фото обрезаны и уменьшены.
 
-- hero-keyboard.jpg, klac-65-wood.jpg, klac-tkl-graphite.jpg, klac-tkl-retro.jpg, keycaps-camp.jpg - Patrick Breen, CC BY 2.0
+- klac-65-wood.jpg, klac-tkl-graphite.jpg, klac-tkl-retro.jpg, keycaps-camp.jpg - Patrick Breen, CC BY 2.0
 - klac-60.jpg, klac-60-2.jpg, klac-60-3.jpg, klac-60-4.jpg - Thomas Vogt, CC BY-SA 2.0
 - switches-mx-green.jpg - Daniel Beardsmore, общественное достояние
 - switch-tester.jpg - Ox1997cow, CC BY-SA 3.0
