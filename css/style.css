@@ -237,15 +237,31 @@ z-index нужен, чтобы карточки с position: relative не на�
     color: var(--color-white);
 }
 
+.site-header__logo,
+.site-header__button {
+    flex-shrink: 0;
+}
+
 .site-header__button {
     margin-left: auto;
+    white-space: nowrap;
+}
+
+/*
+Меню всегда в одну строку. Если на узком экране пункты не помещаются,
+их можно пролистать вбок внутри шапки, а сама страница не сдвигается.
+*/
+.site-nav {
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .site-nav__list {
     display: flex;
     gap: var(--space-lg);
     margin: 0;
-    padding: 0;
+    padding: 6px 4px;
     list-style: none;
 }
 
@@ -254,6 +270,7 @@ z-index нужен, чтобы карточки с position: relative не на�
     padding: var(--space-xs) 0;
     color: var(--color-dark-text);
     text-decoration: none;
+    white-space: nowrap;
     border-bottom: 2px solid transparent;
 }
 
@@ -1254,4 +1271,117 @@ accent-color красит галочки и радиокнопки в цвет �
 .payment__text {
     margin: 0;
     color: var(--color-muted);
+}
+
+/* ===============================
+13. Небольшие экраны
+Полная адаптация будет в КР №3. Здесь только самое нужное:
+шапка остаётся в одну строку, колонки встают друг под другом
+и страница не уезжает вбок на телефоне.
+=============================== */
+
+@media (max-width: 900px) {
+    .site-header__inner {
+        gap: var(--space-md);
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .site-nav__list {
+        gap: var(--space-md);
+    }
+
+    .hero,
+    .catalog,
+    .product,
+    .product-details,
+    .order {
+        grid-template-columns: 1fr;
+    }
+
+    .advantages,
+    .site-footer__inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews,
+    .contacts,
+    .payment {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog__filters,
+    .order__aside {
+        position: static;
+    }
+
+    .promo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: var(--space-lg) var(--space-md) var(--space-xl);
+    }
+
+    .site-header__inner {
+        gap: var(--space-sm);
+        padding: var(--space-sm) 12px;
+    }
+
+    .site-header__logo {
+        font-size: 20px;
+    }
+
+    /*
+    На телефоне кнопка заявки есть в карточках и в подвале,
+    в шапке оставляем только логотип и меню.
+    */
+    .site-header__button {
+        display: none;
+    }
+
+    .site-nav__list {
+        gap: 12px;
+    }
+
+    .site-nav__link {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: var(--space-lg);
+    }
+
+    .hero__title,
+    .page-header__title,
+    .product__title {
+        font-size: 30px;
+    }
+
+    .advantages,
+    .site-footer__inner,
+    .order-form__row {
+        grid-template-columns: 1fr;
+    }
+
+    .order__form {
+        padding: var(--space-md);
+    }
+
+    .info-table {
+        font-size: 14px;
+    }
+
+    .info-table__head,
+    .info-table__name,
+    .info-table__cell {
+        padding: 8px 6px;
+    }
+
+    .to-top {
+        right: var(--space-md);
+        bottom: var(--space-md);
+    }
 }
