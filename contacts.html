@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контакты магазина Клац: адрес шоурума, телефон, режим работы и ответы на частые вопросы.">
+    <title>Контакты | Клац</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">Клац</a>
+
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="delivery.html">Доставка и оплата</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <a class="button site-header__button" href="order.html">Оформить заявку</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+                    <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+                </ol>
+            </nav>
+            <h1 class="page-header__title">Контакты</h1>
+            <p class="page-header__text">Приходите в шоурум попробовать клавиатуры вживую или напишите нам.</p>
+        </div>
+
+        <div class="contacts">
+            <section class="contacts__card">
+                <h2 class="contacts__title">Шоурум</h2>
+                <p class="contacts__text">Москва, ул. Примерная, 10, 2 этаж</p>
+                <p class="contacts__text">5 минут пешком от метро. Вход со двора, на двери наклейка с клавишей.</p>
+            </section>
+
+            <section class="contacts__card">
+                <h2 class="contacts__title">Связаться с нами</h2>
+                <p class="contacts__text">Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p class="contacts__text">E-mail: <a href="mailto:info@klac.example">info@klac.example</a></p>
+                <p class="contacts__text">Отвечаем в течение 15 минут в рабочее время.</p>
+            </section>
+
+            <section class="contacts__card">
+                <h2 class="contacts__title">Режим работы</h2>
+                <p class="contacts__text">Ежедневно с 10:00 до 20:00</p>
+                <p class="contacts__text">Заявки с сайта принимаем круглосуточно.</p>
+            </section>
+        </div>
+
+        <section class="section faq" id="faq">
+            <div class="section__header">
+                <h2 class="section__title">Частые вопросы</h2>
+            </div>
+
+            <details class="faq__item">
+                <summary class="faq__question">Что такое горячая замена свитчей?</summary>
+                <p class="faq__answer">Это когда свитчи вставляются в плату без пайки. Их можно вытащить съёмником и поставить другие за пару минут.</p>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">Какие свитчи выбрать новичку?</summary>
+                <p class="faq__answer">Для печати и игр обычно берут линейные, например Gateron Yellow. Если нравится ощущать нажатие, лучше тактильные. Проще всего купить тестер свитчей и попробовать все.</p>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">Сколько идёт доставка?</summary>
+                <p class="faq__answer">По Москве курьер привезёт за 1-2 дня, в другие города 2-7 дней. Все способы описаны на странице <a href="delivery.html">доставки и оплаты</a>.</p>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">Можно ли вернуть клавиатуру?</summary>
+                <p class="faq__answer">Да, в течение 14 дней, если она не была в использовании и сохранена упаковка.</p>
+            </details>
+            <details class="faq__item">
+                <summary class="faq__question">Можно попробовать клавиатуры перед покупкой?</summary>
+                <p class="faq__answer">Да, в шоуруме стоят все клавиатуры из каталога и тестеры свитчей.</p>
+            </details>
+        </section>
+
+        <aside class="promo">
+            <div class="promo__content">
+                <h2 class="promo__title">Не нашли ответ?</h2>
+                <p class="promo__text">Оставьте заявку, и мы перезвоним в течение 15 минут в рабочее время.</p>
+            </div>
+            <a class="button promo__button" href="order.html?product=consultation">Оставить заявку</a>
+        </aside>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="site-footer__inner">
+            <div class="site-footer__column">
+                <a class="site-footer__logo" href="index.html">Клац</a>
+                <p class="site-footer__text">Механические клавиатуры, свитчи и кейкапы. Учебный проект по дисциплине "Фронтенд и бэкенд разработка".</p>
+            </div>
+
+            <nav class="site-footer__column" aria-label="Разделы сайта">
+                <h2 class="site-footer__title">Разделы</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+                    <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+                    <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+                    <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+                </ul>
+            </nav>
+
+            <nav class="site-footer__column" aria-label="Покупателям">
+                <h2 class="site-footer__title">Покупателям</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="delivery.html">Доставка и оплата</a></li>
+                    <li><a class="site-footer__link" href="contacts.html#faq">Частые вопросы</a></li>
+                    <li><a class="site-footer__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+
+            <div class="site-footer__column">
+                <h2 class="site-footer__title">Контакты</h2>
+                <ul class="site-footer__list">
+                    <li><a class="site-footer__link" href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                    <li><a class="site-footer__link" href="mailto:info@klac.example">info@klac.example</a></li>
+                    <li>Москва, ул. Примерная, 10</li>
+                    <li>Ежедневно с 10:00 до 20:00</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="site-footer__copy">&copy; 2026 Клац. Климашевский Даниил, ЭФБО-07-25.</p>
+    </footer>
+
+    <a class="to-top" href="#top">Наверх</a>
+</body>
+</html>
