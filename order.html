@@ -9,7 +9,7 @@
     <meta property="og:title" content="Оформление заявки | Клац">
     <meta property="og:description" content="Оформление заявки на покупку клавиатуры, свитчей или кейкапов в магазине Клац.">
     <meta property="og:image" content="https://svpeditor.github.io/kr1-html-css-shop/images/klac-60.jpg">
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=6">
     <script src="js/main.js?v=3" defer></script>
 </head>
 <body>
@@ -36,7 +36,7 @@
             <nav class="breadcrumbs" aria-label="Хлебные крошки">
                 <ol class="breadcrumbs__list">
                     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-                    <li class="breadcrumbs__item" aria-current="page">Оформление заявки</li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Оформление заявки</span></li>
                 </ol>
             </nav>
             <h1 class="page-header__title">Оформление заявки</h1>
@@ -101,7 +101,7 @@
                         <div class="order-form__row">
                             <div class="order-form__field">
                                 <label class="order-form__label" for="order-product">Товар</label>
-                                <select class="order-form__input" id="order-product" name="product" required>
+                                <select class="order-form__select" id="order-product" name="product" required>
                                     <option value="">Выберите товар</option>
                                     <optgroup label="Клавиатуры">
                                         <option value="klac-60">Клац 60, 5 490 ₽</option>
@@ -158,7 +158,7 @@
                         <div class="order-form__field">
                             <label class="order-form__label" for="order-comment">Комментарий</label>
                             <textarea
-                                class="order-form__input"
+                                class="order-form__textarea"
                                 id="order-comment"
                                 name="comment"
                                 rows="4"
@@ -180,7 +180,7 @@
                     </div>
 
                     <div class="order-form__actions">
-                        <button class="button" type="submit">Отправить заявку</button>
+                        <button class="button button--primary" type="submit">Отправить заявку</button>
                         <button class="button button--secondary" type="reset">Очистить форму</button>
                     </div>
                 </form>
