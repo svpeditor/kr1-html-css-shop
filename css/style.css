@@ -198,7 +198,7 @@ z-index нужен, чтобы карточки не наезжали на не�
     gap: var(--space-lg);
     max-width: var(--container-width);
     margin: 0 auto;
-    padding: 12px 20px;
+    padding: var(--space-xs) 20px;
 }
 
 .site-header__logo {
@@ -213,37 +213,48 @@ z-index нужен, чтобы карточки не наезжали на не�
     color: var(--color-text);
 }
 
-.site-header__button {
-    flex-shrink: 0;
-    margin-left: auto;
-    white-space: nowrap;
-}
-
 /*
-Меню всегда в одну строку. Если на узком экране пункты не помещаются,
-их можно пролистать вбок внутри шапки, а сама страница не сдвигается.
+Меню занимает всё место после логотипа. На узком экране пункты
+не переносятся, а листаются вбок внутри шапки (см. раздел 13).
 */
 .site-nav {
+    flex-grow: 1;
     min-width: 0;
     overflow-x: auto;
     scrollbar-width: none;
 }
 
+/*
+Меню через Flexbox: пункты в ряд по центру, между ними одинаковый gap.
+flex-wrap разрешает перенос, если пункты не помещаются в строку.
+*/
 .site-nav__list {
     display: flex;
-    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs);
     margin: 0;
     padding: 6px 4px;
     list-style: none;
 }
 
+/*
+inline-block нужен, чтобы у ссылки работал padding
+и при наведении подсвечивалась вся область пункта.
+*/
 .site-nav__link {
+    display: inline-block;
+    padding: var(--space-sm) 12px;
+    color: var(--color-primary);
     white-space: nowrap;
     text-decoration: none;
+    border-radius: var(--radius-sm);
 }
 
 .site-nav__link:hover {
-    text-decoration: underline;
+    color: var(--color-white);
+    background-color: var(--color-primary);
 }
 
 .site-nav__link--active {
@@ -401,13 +412,13 @@ z-index нужен, чтобы карточки не наезжали на не�
 =============================== */
 
 /*
-Сетка карточек: колонок столько, сколько поместится
+Сетка карточек через Grid: колонок столько, сколько поместится
 при ширине карточки не меньше 230px.
 */
-.product-grid {
+.products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: var(--space-md);
+    gap: var(--space-lg);
 }
 
 /*
@@ -789,11 +800,13 @@ position: relative нужен, чтобы бейдж ставился
 }
 
 /*
-Каталог: слева фильтры, справа товары.
+Каталог через Grid: слева область фильтров, справа область товаров.
+Имена областей заданы в grid-template-areas, блоки ставятся в них через grid-area.
 */
 .catalog {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 260px 1fr;
+    grid-template-areas: "filters products";
     align-items: start;
     gap: var(--space-lg);
     max-width: var(--container-width);
@@ -804,8 +817,13 @@ position: relative нужен, чтобы бейдж ставился
 Фильтры прилипают при прокрутке и остаются под шапкой.
 */
 .catalog__filters {
+    grid-area: filters;
     position: sticky;
     top: calc(var(--header-height) + var(--space-md));
+}
+
+.catalog__content {
+    grid-area: products;
 }
 
 .catalog__section {
@@ -824,20 +842,28 @@ position: relative нужен, чтобы бейдж ставился
     accent-color: var(--color-primary);
 }
 
+/*
+Форма фильтров тоже на Grid, gap задаёт расстояние между группами полей.
+*/
+.filters__form {
+    display: grid;
+    gap: var(--space-md);
+}
+
 .filters__title {
-    margin: 0 0 12px;
+    margin: 0;
     font-size: 18px;
 }
 
 .filters__group {
-    margin: 0 0 12px;
-    padding: 0;
-    border: none;
+    margin: 0;
+    padding: var(--space-sm) 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
 }
 
 .filters__legend {
-    margin-bottom: 6px;
-    padding: 0;
+    padding: 0 var(--space-xs);
     font-weight: bold;
 }
 
@@ -875,7 +901,6 @@ position: relative нужен, чтобы бейдж ставился
 .filters__actions {
     display: flex;
     gap: var(--space-sm);
-    margin-top: 12px;
 }
 
 /* ===============================
@@ -1152,11 +1177,33 @@ position: relative нужен, чтобы бейдж ставился
 =============================== */
 
 @media (max-width: 900px) {
+    /*
+    На узком экране пункты меню не переносятся, иначе шапка
+    станет в две строки. Меню остаётся в одну строку и листается вбок.
+    */
+    .site-nav__list {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .site-nav__link {
+        padding: var(--space-sm);
+    }
+
     .catalog,
     .product,
     .product-details,
     .order {
         grid-template-columns: 1fr;
+    }
+
+    /*
+    В одной колонке фильтры стоят над товарами.
+    */
+    .catalog {
+        grid-template-areas:
+            "filters"
+            "products";
     }
 
     .advantages,
@@ -1188,19 +1235,7 @@ position: relative нужен, чтобы бейдж ставился
 
     .site-header__inner {
         gap: 12px;
-        padding: var(--space-sm) 12px;
-    }
-
-    /*
-    На телефоне кнопка заявки есть в карточках и в подвале,
-    в шапке оставляем только логотип и меню.
-    */
-    .site-header__button {
-        display: none;
-    }
-
-    .site-nav__list {
-        gap: 12px;
+        padding: var(--space-xs) 12px;
     }
 
     .advantages,
