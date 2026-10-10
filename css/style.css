@@ -43,10 +43,11 @@
 }
 
 /*
-При переходе по якорю оставляем место под закреплённую шапку,
-иначе заголовок раздела прячется под ней.
+Плавная прокрутка к якорям. При переходе оставляем место
+под закреплённую шапку, иначе заголовок раздела прячется под ней.
 */
 html {
+    scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-height) + var(--space-md));
 }
 
@@ -89,6 +90,22 @@ textarea:focus-visible,
 summary:focus-visible {
     outline: 2px solid var(--color-primary);
     outline-offset: 3px;
+}
+
+/*
+Подсветка раздела, к которому перешли по якорной ссылке.
+*/
+:target {
+    outline: 2px dashed var(--color-primary);
+    outline-offset: 4px;
+}
+
+/*
+На шапку ведёт кнопка "Наверх". Рамку у неё не показываем,
+иначе при прокрутке под шапкой остаётся пунктир.
+*/
+.site-header:target {
+    outline: none;
 }
 
 .button {
