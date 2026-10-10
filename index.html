@@ -9,7 +9,7 @@
     <meta property="og:title" content="Клац | Магазин механических клавиатур">
     <meta property="og:description" content="Клац - учебный интернет-магазин механических клавиатур, свитчей и кейкапов.">
     <meta property="og:image" content="https://svpeditor.github.io/kr1-html-css-shop/images/klac-60.jpg">
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=6">
     <script src="js/main.js?v=3" defer></script>
 </head>
 <body>
@@ -39,7 +39,7 @@
                 Каждую клавиатуру проверяем перед отправкой.
             </p>
             <div class="hero__actions">
-                <a class="button" href="catalog.html">Перейти в каталог</a>
+                <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
                 <a class="button button--secondary" href="#popular">Популярные товары</a>
             </div>
         </section>
@@ -90,7 +90,7 @@
                         <p class="product-card__price">5 490 ₽</p>
                         <div class="product-card__actions">
                             <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                            <button class="button button--small product-card__button" type="button" data-product="Клац 60">Заказать</button>
+                            <button class="button button--primary button--small product-card__button" type="button" data-product="Клац 60">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -105,7 +105,7 @@
                         <p class="product-card__price">12 990 ₽</p>
                         <div class="product-card__actions">
                             <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                            <button class="button button--small product-card__button" type="button" data-product="Клац 65 Wood">Заказать</button>
+                            <button class="button button--primary button--small product-card__button" type="button" data-product="Клац 65 Wood">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -120,7 +120,7 @@
                         <p class="product-card__price">7 990 ₽ <s class="product-card__old-price">9 490 ₽</s></p>
                         <div class="product-card__actions">
                             <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                            <button class="button button--small product-card__button" type="button" data-product="Клац TKL Graphite">Заказать</button>
+                            <button class="button button--primary button--small product-card__button" type="button" data-product="Клац TKL Graphite">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -135,7 +135,7 @@
                         <p class="product-card__price">790 ₽</p>
                         <div class="product-card__actions">
                             <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                            <button class="button button--small product-card__button" type="button" data-product="Тестер свитчей">Заказать</button>
+                            <button class="button button--primary button--small product-card__button" type="button" data-product="Тестер свитчей">Заказать</button>
                         </div>
                     </div>
                 </article>
@@ -189,7 +189,7 @@
                 <h2 class="promo__title">Не знаете, какую клавиатуру выбрать?</h2>
                 <p class="promo__text">Оставьте заявку на консультацию, поможем подобрать формат и свитчи.</p>
             </div>
-            <a class="button promo__button" href="order.html?product=consultation">Получить консультацию</a>
+            <a class="button button--primary promo__button" href="order.html?product=consultation">Получить консультацию</a>
         </aside>
     </main>
 
@@ -298,7 +298,7 @@
 
             <div class="order-form__field">
                 <label class="order-form__label" for="order-topic">Тема заявки</label>
-                <select class="order-form__input" id="order-topic" name="topic" required>
+                <select class="order-form__select" id="order-topic" name="topic" required>
                     <option value="">Выберите тему</option>
                     <option value="product">Заказ товара</option>
                     <option value="consultation">Консультация</option>
@@ -309,7 +309,7 @@
             <div class="order-form__field">
                 <label class="order-form__label" for="order-comment">Комментарий</label>
                 <textarea
-                    class="order-form__input"
+                    class="order-form__textarea"
                     id="order-comment"
                     name="comment"
                     rows="3"
@@ -331,7 +331,7 @@
 
             <div class="order-form__actions">
                 <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
-                <button class="button" type="submit">Отправить заявку</button>
+                <button class="button button--primary" type="submit">Отправить заявку</button>
             </div>
         </form>
     </dialog>

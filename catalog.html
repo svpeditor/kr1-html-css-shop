@@ -9,7 +9,7 @@
     <meta property="og:title" content="Каталог | Клац">
     <meta property="og:description" content="Каталог магазина Клац: механические клавиатуры, свитчи, кейкапы и аксессуары.">
     <meta property="og:image" content="https://svpeditor.github.io/kr1-html-css-shop/images/klac-60.jpg">
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
     <header class="site-header" id="top">
@@ -35,7 +35,7 @@
             <nav class="breadcrumbs" aria-label="Хлебные крошки">
                 <ol class="breadcrumbs__list">
                     <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-                    <li class="breadcrumbs__item" aria-current="page">Каталог</li>
+                    <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Каталог</span></li>
                 </ol>
             </nav>
             <h1 class="page-header__title">Каталог</h1>
@@ -51,48 +51,48 @@
             </ul>
         </nav>
 
-        <div class="catalog">
-            <aside class="catalog__filters filters" aria-label="Фильтры">
-                <form class="filters__form" action="#">
-                    <h2 class="filters__title">Фильтры</h2>
+        <div class="catalog-layout">
+            <aside class="catalog-layout__filters catalog-filters" aria-label="Фильтры">
+                <form class="catalog-filters__form" action="#">
+                    <h2 class="catalog-filters__title">Фильтры</h2>
 
-                    <fieldset class="filters__group">
-                        <legend class="filters__legend">Категория</legend>
-                        <label class="filters__option"><input type="checkbox" name="category" value="keyboards" checked> Клавиатуры</label>
-                        <label class="filters__option"><input type="checkbox" name="category" value="switches" checked> Свитчи</label>
-                        <label class="filters__option"><input type="checkbox" name="category" value="keycaps" checked> Кейкапы</label>
-                        <label class="filters__option"><input type="checkbox" name="category" value="accessories" checked> Аксессуары</label>
+                    <fieldset class="catalog-filters__group">
+                        <legend class="catalog-filters__legend">Категория</legend>
+                        <label class="catalog-filters__option"><input type="checkbox" name="category" value="keyboards" checked> Клавиатуры</label>
+                        <label class="catalog-filters__option"><input type="checkbox" name="category" value="switches" checked> Свитчи</label>
+                        <label class="catalog-filters__option"><input type="checkbox" name="category" value="keycaps" checked> Кейкапы</label>
+                        <label class="catalog-filters__option"><input type="checkbox" name="category" value="accessories" checked> Аксессуары</label>
                     </fieldset>
 
-                    <fieldset class="filters__group">
-                        <legend class="filters__legend">Формат клавиатуры</legend>
-                        <label class="filters__option"><input type="checkbox" name="layout" value="60"> 60%</label>
-                        <label class="filters__option"><input type="checkbox" name="layout" value="65"> 65%</label>
-                        <label class="filters__option"><input type="checkbox" name="layout" value="tkl"> TKL</label>
+                    <fieldset class="catalog-filters__group">
+                        <legend class="catalog-filters__legend">Формат клавиатуры</legend>
+                        <label class="catalog-filters__option"><input type="checkbox" name="layout" value="60"> 60%</label>
+                        <label class="catalog-filters__option"><input type="checkbox" name="layout" value="65"> 65%</label>
+                        <label class="catalog-filters__option"><input type="checkbox" name="layout" value="tkl"> TKL</label>
                     </fieldset>
 
-                    <fieldset class="filters__group">
-                        <legend class="filters__legend">Цена, ₽</legend>
-                        <div class="filters__price">
-                            <label class="filters__price-label" for="price-from">от</label>
-                            <input class="filters__input" id="price-from" name="price-from" type="number" min="0" step="100" placeholder="0">
-                            <label class="filters__price-label" for="price-to">до</label>
-                            <input class="filters__input" id="price-to" name="price-to" type="number" min="0" step="100" placeholder="15000">
+                    <fieldset class="catalog-filters__group">
+                        <legend class="catalog-filters__legend">Цена, ₽</legend>
+                        <div class="catalog-filters__price">
+                            <label class="catalog-filters__price-label" for="price-from">от</label>
+                            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" step="100" placeholder="0">
+                            <label class="catalog-filters__price-label" for="price-to">до</label>
+                            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" step="100" placeholder="15000">
                         </div>
                     </fieldset>
 
-                    <label class="filters__option"><input type="checkbox" name="in-stock" value="yes"> Только в наличии</label>
+                    <label class="catalog-filters__option"><input type="checkbox" name="in-stock" value="yes"> Только в наличии</label>
 
-                    <div class="filters__actions">
-                        <button class="button button--small" type="button">Показать</button>
+                    <div class="catalog-filters__actions">
+                        <button class="button button--primary button--small" type="button">Показать</button>
                         <button class="button button--secondary button--small" type="reset">Сбросить</button>
                     </div>
                 </form>
             </aside>
 
-            <div class="catalog__content">
-                <section class="catalog__section" id="keyboards">
-                    <h2 class="catalog__title">Клавиатуры</h2>
+            <div class="catalog-layout__products">
+                <section class="catalog-layout__section" id="keyboards">
+                    <h2 class="catalog-layout__title">Клавиатуры</h2>
                     <div class="products-grid">
                         <article class="product-card">
                             <span class="badge badge--hit product-card__badge">Хит</span>
@@ -104,7 +104,7 @@
                                 <p class="product-card__price">5 490 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=klac-60">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=klac-60">Заказать</a>
                                 </div>
                             </div>
                         </article>
@@ -119,7 +119,7 @@
                                 <p class="product-card__price">12 990 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=klac-65-wood">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=klac-65-wood">Заказать</a>
                                 </div>
                             </div>
                         </article>
@@ -134,7 +134,7 @@
                                 <p class="product-card__price">7 990 ₽ <s class="product-card__old-price">9 490 ₽</s></p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=klac-tkl-graphite">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=klac-tkl-graphite">Заказать</a>
                                 </div>
                             </div>
                         </article>
@@ -148,15 +148,15 @@
                                 <p class="product-card__price">8 490 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=klac-tkl-retro">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=klac-tkl-retro">Заказать</a>
                                 </div>
                             </div>
                         </article>
                     </div>
                 </section>
 
-                <section class="catalog__section" id="switches">
-                    <h2 class="catalog__title">Свитчи</h2>
+                <section class="catalog-layout__section" id="switches">
+                    <h2 class="catalog-layout__title">Свитчи</h2>
                     <div class="products-grid">
                         <article class="product-card">
                             <img class="product-card__image" src="images/switches-mx-green.jpg" width="800" height="600" alt="Два свитча Cherry MX Green, вид сверху и сбоку" loading="lazy">
@@ -167,7 +167,7 @@
                                 <p class="product-card__price">1 190 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=switches-mx-green">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=switches-mx-green">Заказать</a>
                                 </div>
                             </div>
                         </article>
@@ -182,15 +182,15 @@
                                 <p class="product-card__price">790 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=switch-tester">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=switch-tester">Заказать</a>
                                 </div>
                             </div>
                         </article>
                     </div>
                 </section>
 
-                <section class="catalog__section" id="keycaps">
-                    <h2 class="catalog__title">Кейкапы</h2>
+                <section class="catalog-layout__section" id="keycaps">
+                    <h2 class="catalog-layout__title">Кейкапы</h2>
                     <div class="products-grid">
                         <article class="product-card product-card--discount">
                             <span class="badge badge--sale product-card__badge">Скидка</span>
@@ -202,7 +202,7 @@
                                 <p class="product-card__price">2 990 ₽ <s class="product-card__old-price">3 490 ₽</s></p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=keycaps-orange">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=keycaps-orange">Заказать</a>
                                 </div>
                             </div>
                         </article>
@@ -216,15 +216,15 @@
                                 <p class="product-card__price">4 490 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=keycaps-camp">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=keycaps-camp">Заказать</a>
                                 </div>
                             </div>
                         </article>
                     </div>
                 </section>
 
-                <section class="catalog__section" id="accessories">
-                    <h2 class="catalog__title">Аксессуары</h2>
+                <section class="catalog-layout__section" id="accessories">
+                    <h2 class="catalog-layout__title">Аксессуары</h2>
                     <div class="products-grid">
                         <article class="product-card">
                             <img class="product-card__image" src="images/keycap-puller.jpg" width="800" height="600" alt="Проволочный съёмник кейкапов с чёрной ручкой" loading="lazy">
@@ -235,7 +235,7 @@
                                 <p class="product-card__price">390 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <a class="button button--small" href="order.html?product=keycap-puller">Заказать</a>
+                                    <a class="button button--primary button--small" href="order.html?product=keycap-puller">Заказать</a>
                                 </div>
                             </div>
                         </article>
@@ -249,7 +249,7 @@
                                 <p class="product-card__price">1 490 ₽</p>
                                 <div class="product-card__actions">
                                     <a class="button button--secondary button--small" href="product.html">Подробнее</a>
-                                    <button class="button button--small" type="button" disabled>Нет в наличии</button>
+                                    <button class="button button--primary button--small" type="button" disabled>Нет в наличии</button>
                                 </div>
                             </div>
                         </article>
